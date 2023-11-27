@@ -3,7 +3,7 @@
 #### DESCRIPTION:
 When processing signals from split-Hopkinson pressure bar (SHPB) experiments, it is frequently presumed that longitudinal stress waves in the pressure bars travel one-dimensionally at a common velocity of c0. Hence, measurements recorded at the strain gauges are commonly simply translated to the end of the bar using a suitable time delay. In reality, stress waves travel at a certain phase velocity, cp, which varies with frequency, bar diameter, one-dimensional wave speed and Poisson’s ratio. As the frequency of a wave rises, the phase velocity drops, resulting in signal dispersion as it propagates down the bar. The dispersion of the stress pulse is followed by a frequency-dependent fluctuation in stress and strain throughout the bar cross-section. Therefore, a signal recorded on the surface of the bar at some distance from the specimen will not accurately represent the stresses the specimen was subjected to, and hence cannot be used to objectively measure the specimen response.
 
-*SHPB_Processing.py* is the main algorithm required to process all the SHPB test data, from which the subroutines dispersion.py and dispersion_factors.py are called. The algorithm was inspired by a Matlab script created by Barr (2016). 
+*SHPB_Processing.py* is the main algorithm required to process all the SHPB test data, from which the subroutines *dispersion.py* and *dispersion_factors.py* are called. The algorithm was inspired by a Matlab script created by Barr (2016). 
 
 The functionalities, architecture and applied examples of the open-source algorithm *SHPB_Processing.py* are detailed in the paper by A.Van Lerberghe et al. (2023), currently going through the journal review process. 
 
@@ -14,7 +14,7 @@ The subroutine *dispersion.py*, in *SHPB_Processing.py*, uses an adaptation of T
 3.	The amplitude of each frequency component is corrected using the factors m1, m2, v_ratio and norm_freq, which account for strain and Young’s modulus fluctuation over the bar cross section, respectively. Davies’ investigation of radial effects in a cylindrical pressure bar yielded these results.
 4.	The inverse FFT is used to transform the signal back into the time domain.
 
-To save time, dispersion.py utilises a subroutine *dispersion_factors.py*, which includes a precalculated, normalised look-up table of phase velocity, m1, m2, v_ratio and norm_freq. *SHPB_Processing.p*y, includes a lookup table for a Poisson’s ratio of 0.29. More tables can be generated using the calculation method outlined in Tyas and Pope (2005) and the Python script *phase_velocity.py*, (Van Lerberghe, A., Barr, A. D. (2023)), available on GitHub and ORDA, see links below.
+To save time, *dispersion.py* utilises a subroutine *dispersion_factors.py*, which includes a precalculated, normalised look-up table of phase velocity, m1, m2, v_ratio and norm_freq. *SHPB_Processing.p*y, includes a lookup table for a Poisson’s ratio of 0.29. More tables can be generated using the calculation method outlined in Tyas and Pope (2005) and the Python script *phase_velocity.py*, (Van Lerberghe, A., Barr, A. D. (2023)), available on GitHub and ORDA, see links below.
 
 #### FILES INCLUDED:
 - *SHPB_Processing.py*: Includes the main python function, with the documentation on the use of the function included in the file as comments. It requires *dispersion.py*, *dispersion_factors.py*, and dispersion_factors folder to run.
