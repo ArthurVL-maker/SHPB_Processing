@@ -38,4 +38,4 @@ Software ORDA link: [https://doi.org/10.15131/shef.data.22010999]\
 Software GitHub link: [https://github.com/ArthurVL-maker/Phase_velocity.git]
 
 #### AUTHORS:
-Arthur Van Lerberghe <avanlerberghe1@sheffield.ac.uk>, Kin Shing Oswald Li <ksoli1@sheffield.ac.uk> & Andrew D. Barr <a.barr@sheffield.ac.uk>.
+Kin Shing Oswald Li <ksoli1@sheffield.ac.uk>, Arthur Van Lerberghe <avanlerberghe1@sheffield.ac.uk> & Andrew D. Barr <a.barr@sheffield.ac.uk>.
