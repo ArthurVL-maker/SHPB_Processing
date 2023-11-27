@@ -7,7 +7,7 @@ When processing signals from split-Hopkinson pressure bar (SHPB) experiments, it
 
 The functionalities, architecture and applied examples of the open-source algorithm *SHPB_Processing.py* are detailed in the paper by A.Van Lerberghe et al. (2023), currently going through the journal review process. 
 
-The subroutine *dispersion.py*, in *process_SHPB.py*, uses an adaptation of Tyas and Pope’s (2005) dispersion-correction approach to verify that the inferred axial stress and strain data appropriately represent the specimen behaviour, as specified below:
+The subroutine *dispersion.py*, in *SHPB_Processing.py*, uses an adaptation of Tyas and Pope’s (2005) dispersion-correction approach to verify that the inferred axial stress and strain data appropriately represent the specimen behaviour, as specified below:
 
 1.	The fast Fourier transform (FFT) is used to convert the time-domain strain signal to the frequency domain.
 2.	Using Bancroft’s equation, a correction is made to the phase angle of each frequency component to account for dispersion over the distance between the strain gauge and the bar end. 
